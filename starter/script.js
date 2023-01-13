@@ -2,25 +2,26 @@
 
 var myQuestions = [
   {
-    question: "What is 10/2?",
+    question: "What is a string?",
     answers: {
       a: '3',
       b: '5',
-      c: '115'
+      c: '115',
     },
     correctAnswer: 'b'
+    
   },
   {
-    question: "What is 30/3?",
+    question: "What is an array?",
     answers: {
       a: '3',
       b: '5',
-      c: '10'
+      c: '10',
     },
     correctAnswer: 'c'
   },
   {
-    question: "What is 90/4?",
+    question: "What is an object?",
     answers: {
       a: '3',
       b: '22.5',
@@ -29,11 +30,11 @@ var myQuestions = [
     correctAnswer: 'b'
   },
   {
-    question: "What is 100/3?",
+    question: "what is a function?",
     answers: {
       a: '3.333333',
       b: '30',
-      c: '29'
+      c: '29',
     },
     correctAnswer: '3.333333'
   },
@@ -41,7 +42,7 @@ var myQuestions = [
 ];
 
 function Function() {
-  setTimeout(setAlert, 4000);
+  setTimeout(setAlert, 1000);
 }
 function setAlert() {
 alert("Hello World!");
@@ -53,11 +54,45 @@ alert("Hello World!");
 //   let num= 10
 //   return (function(){return num-- })
 // }
+// Game start on button click
+// timer start 90 seconds
+// hide start screen and show question 1 with setAttribute
+// question 1 is shown to user
+// if answer correct store the value
+// if answer is wrong takes 10sec from timer
+// question 2 is shown to user
+// if answer correct store the value
+// if answer is wrong takes 10sec from timer
+// question 3 is shown to user
+// if answer correct store the value
+// if answer is wrong takes 10sec from timer
+// question 4 is shown to user
+// if answer correct store the value
+// if answer is wrong takes 10sec from timer
+// question 5 is shown to user
+// if answer correct store the value
+// if answer is wrong takes 10sec from timer
+// End of game - show total score
+// click on highscores to see best scores
+// enter initials to save your score
+//
 
 
+// let timer = document.querySelector('#time');
+
+// timer.addEventListener('click', function() {
+// 	let i = 0;
+	
+// 	setInterval(function() {
+// 		console.log(++i);
+// 	}, 1000);
+// });
+
+start.addEventListener("click", function(){ console.log("Start Quiz"); });
    
   
 var quizContainer = document.getElementById('quiz');
+console.log(quizContainer);
 // 
 var resultsContainer = document.getElementById('results');
 // const results = document.querySelector("#results")
@@ -68,10 +103,13 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
+
+}
+
   function showQuestions(questions, quizContainer){
     // we'll need a place to store the output and the answer choices
     var output = [myQuestions.userAnswer];
-    var answers;
+    var answers = "";
     console.log(output);
 
     // for each question...

@@ -1,19 +1,16 @@
-  // for each question...
-  for(var i=0; i<questions.length; i++){
-  }
-      
-    // first reset the list of answers
-    answers = [];
+console.log ("Here are the questions file");
+var x = "HEllO";
 
-    // for each available answer...
-    for(letter in questions[i].answers){
+var myQuestions = [
+  {
+  question: "How do two js files interact?",
+  answers: [
+    "Don't ask me",
+    "No idea",
+    "Boh"
+  ]
 
-      // ...add an html radio button
-      answers.push(
-        '<label>'
-          + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-          + letter + ': '
-          + questions[i].answers[letter]
-        + '</label>'
-      );
-    }
+},
+]
+
+//need a for loop to change questions and print choices
