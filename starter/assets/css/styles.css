@@ -38,14 +38,14 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
+  color: rgb(46, 131, 205);
   background-color: #6a6179;
   height: 70px;
   font-size: 50px;
 }
 
 #demo:hover {
-  background-color: aqua;
+  background-color: rgb(71, 128, 128);
 }
 
 input[type="text"] {
@@ -99,4 +99,5 @@ li:nth-child(odd) {
   position: absolute;
   top: 10px;
   right: 10px;
+  color: coral;
 }

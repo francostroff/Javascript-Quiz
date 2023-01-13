@@ -17,9 +17,32 @@ var myQuestions = [
       c: '10'
     },
     correctAnswer: 'c'
-  }
+  },
+  {
+    question: "What is 90/4?",
+    answers: {
+      a: '3',
+      b: '22.5',
+      c: '35.5'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "What is 100/3?",
+    answers: {
+      a: '3.333333',
+      b: '30',
+      c: '29'
+    },
+    correctAnswer: '3.333333'
+  },
+
 ];
 
+  
+
+
+  
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
@@ -30,8 +53,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
   function showQuestions(questions, quizContainer){
     // we'll need a place to store the output and the answer choices
-    var output = [];
+    var output = [myQuestions.userAnswer];
     var answers;
+    console.log(output);
 
     // for each question...
     for(var i=0; i<questions.length; i++){
