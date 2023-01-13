@@ -1,5 +1,6 @@
   // for each question...
   for(var i=0; i<questions.length; i++){
+  }
       
     // first reset the list of answers
     answers = [];

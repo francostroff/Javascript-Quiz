@@ -29,7 +29,7 @@
         <button id="start">Start Quiz</button>
       </div>
 
-      <div id="questions" class="hide">
+      <div id="questions" class="show">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
       </div>
@@ -43,12 +43,26 @@
         </p>
       </div>
 
+        <h1>Welcome to JavaScript!</h1>
+        <p>JavaScript also called JS sometimes is the world's most popular and lightweight interpreted compiled programming language. It is a scripting language for web page development.</p>
+        <p>JavaScript can be used to develop server-side as well as client-side developments.</p>
+        <p>JS can be added to HTML pages in two ways:
+          <br>
+          1. <b>Internal JS</b> - The script is directly added to the HTML file by writing JS code inside &lt;SCRIPT&gt; and &lt;/SCRIPT&gt; tags. It can be either placed inside the body or in head tags.
+          <br>
+          2. <b>External JS</b> - We can also create another file to store JavaScript code with .js extention. This file can further be linked to HTML file inside the head tag.
+        </p>
+        <input type="submit" onClick="myFunction()" value="HOME" class="button" />
+        <script>
+          function myFunction() {
+            window.location.href = "highscores.html";
+          }
+        </script>
+
       <div id="feedback" class="feedback hide"></div>
     </div>
-<script> src= "a"</script>
-    <script src="/starter/script.js"></script>
-    <script src="/assets/questions.js"></script>
-    <script src="/assets/logic.js"></script>
-    
+    <script src="../starter/script.js"></script>
+    <script src="../assets/logic.js"></script>
+    <script src="../assets/questions.js"></script>
   </body>
 </html>

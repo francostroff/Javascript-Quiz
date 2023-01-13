@@ -1,3 +1,4 @@
+//set timer
 
 var myQuestions = [
   {
@@ -23,7 +24,7 @@ var myQuestions = [
     answers: {
       a: '3',
       b: '22.5',
-      c: '35.5'
+      c: '35.5',
     },
     correctAnswer: 'b'
   },
@@ -39,12 +40,28 @@ var myQuestions = [
 
 ];
 
-  
+function Function() {
+  setTimeout(setAlert, 4000);
+}
+function setAlert() {
+alert("Hello World!");
+}
+
+//timer
+// const count = (function())
+// {
+//   let num= 10
+//   return (function(){return num-- })
+// }
 
 
+   
   
 var quizContainer = document.getElementById('quiz');
+// 
 var resultsContainer = document.getElementById('results');
+// const results = document.querySelector("#results")
+console.log(resultsContainer);
 var submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
@@ -84,9 +101,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     }
 
     // finally combine our output list into one string of html and put it on the page
-    quizContainer.innerHTML = output.join('');
+    quizContainer.innerHTML = output.join('');{
   }
-
 
   function showResults(questions, quizContainer, resultsContainer){
     
