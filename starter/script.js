@@ -1,112 +1,176 @@
-//set timer
 
-var myQuestions = [
-  {
-    question: "What is a string?",
-    answers: {
-      a: '3',
-      b: '5',
-      c: '115',
-    },
-    correctAnswer: 'b'
-    
-  },
-  {
-    question: "What is an array?",
-    answers: {
-      a: '3',
-      b: '5',
-      c: '10',
-    },
-    correctAnswer: 'c'
-  },
-  {
-    question: "What is an object?",
-    answers: {
-      a: '3',
-      b: '22.5',
-      c: '35.5',
-    },
-    correctAnswer: 'b'
-  },
-  {
-    question: "what is a function?",
-    answers: {
-      a: '3.333333',
-      b: '30',
-      c: '29',
-    },
-    correctAnswer: '3.333333'
-  },
-
-];
-
-function Function() {
-  setTimeout(setAlert, 1000);
-}
-function setAlert() {
-alert("Hello World!");
-}
-
-//timer
-// const count = (function())
-// {
-//   let num= 10
-//   return (function(){return num-- })
+// // function for showing the question
+// function showQuestion(question1) {
+//   // code
 // }
-// Game start on button click
-// timer start 90 seconds
-// hide start screen and show question 1 with setAttribute
-// question 1 is shown to user
-// if answer correct store the value
-// if answer is wrong takes 10sec from timer
-// question 2 is shown to user
-// if answer correct store the value
-// if answer is wrong takes 10sec from timer
-// question 3 is shown to user
-// if answer correct store the value
-// if answer is wrong takes 10sec from timer
-// question 4 is shown to user
-// if answer correct store the value
-// if answer is wrong takes 10sec from timer
-// question 5 is shown to user
-// if answer correct store the value
-// if answer is wrong takes 10sec from timer
-// End of game - show total score
-// click on highscores to see best scores
-// enter initials to save your score
-//
+// // call the function
+// showQuestion(question1);
+// console.log (question1)
+          // Hide
+  
+// let start = document.querySelector('#start');
+
+//timer countdown
+
+let maxTicks = 90;
+let tickCount = 0;
+let tick = function()
+{if (tickCount >= maxTicks)
+    {
+   // Stops the interval.
+        clearInterval(myInterval);
+        return;
+    }
+   // The particular code you want to excute on each tick 
+    document.getElementById("time").innerHTML = (maxTicks - tickCount);
+    tickCount++;
+};
+let myInterval = setInterval(tick, 1000);
 
 
-// let timer = document.querySelector('#time');
+function startQuiz() {
+  document.getElementById("start-screen").innerHTML = "";
+ }
+ function startQuestion1() {
+  document.getElementByClass("hide").innerHTML = "";
+ }
 
-// timer.addEventListener('click', function() {
-// 	let i = 0;
+
+ document.getElementById('choices').addEventListener('click', choices_Div);
+//show questions
+//  let titleDiv = document.getElementById('questions-1');
+//  function startQuestion(){
+//  document.getElementById("questions-1").innerHTML="";
+//  console.log()
+//  }
+let startScreen = document.getElementById("#start-screen");
+
+document.getElementById("questions-1").addEventListener('click',myQuestions);
+
+let i=0
+
+const correctAnswers = ["2", "1", "3"];
+
+// var todoList = document.querySelector("#todo-list");
+// renderTodos();
+
+// titleDiv.textContent = questions;
+// showQuestion(questions);
+// let titleDiv = document.getElementById('question-title');
+// titleDiv.textContent = questions-title;
+// showQuestion(question-title);
+
+// let time = document.querySelector('time');
+//  time.addEventListener('click', function() {
+//  	let i = 0;
 	
 // 	setInterval(function() {
-// 		console.log(++i);
-// 	}, 1000);
-// });
+// 		alert(++i);
+//  }, 1000);
+//  });
 
-start.addEventListener("click", function(){ console.log("Start Quiz"); });
+//  var questions = [
+//   {
+//     question: "What is a string?",
+//     answers: {
+//       a: 'Line of text',
+//       b: 'Strings are for storing and manipulating text',
+//       c: 'A special variable, which can hold more than one value:',
+//     },
+//     correctAnswer: 'b'
+    
+//   },
+//   {
+//     question: "What is an array?",
+//     answers: {
+//       a: '3',
+//       b: '5',
+//       c: '10',
+//     },
+//     correctAnswer: 'c'
+//   },
+//   {
+//     question: "What is an object?",
+//     answers: {
+//       a: '3',
+//       b: '22.5',
+//       c: '35.5',
+//     },
+//     correctAnswer: 'b'
+//   },
+//   {
+//     question: "what is a function?",
+//     answers: {
+//       a: '3.333333',
+//       b: '30',
+//       c: '29',
+//     },
+//     correctAnswer: '3.333333'
+//   },
+
+// ];
+
+
+
+
+// start.addEventListener('click', function() {
+// 	let i = 0;
+// });
+  
+// start.addEventListener("click", function(){ console.log("Start Quiz"); });
+//  ("start").click( function(){
+//   var counter = 20;
+//   setInterval(function() {
+//    counter--;
+//     if (counter >= 0) {
+//        span = document.getElementById("count");
+//        span.innerHTML = "start";
+//   }
+//  if (counter === 0) {
+//       alert('sorry, out of time');
+//         clearInterval(counter);
+//       }
+//     }, 1000);
+//  });
+
+// var todos = ["Learn HTML", "Learn CSS", "Learn JavaScript"];
+// var todoList = document.querySelector("#todo-list");
+// renderTodos();
+
+// function renderTodos() {
+//   // Clear todoList element and update todoCountSpan
+//   todoList.innerHTML = "";
+//   todoCountSpan.textContent = todos.length;
+
+//   // Render a new li for each todo
+//   for (var i = 0; i < todos.length; i++) {
+//     var todo = todos[i];
+
+//     var li = document.createElement("li");
+//     li.textContent = todo;
+//     todoList.appendChild(li);
+//   }
+// }
+
+
    
   
-var quizContainer = document.getElementById('quiz');
-console.log(quizContainer);
+
+
+
+
 // 
 var resultsContainer = document.getElementById('results');
 // const results = document.querySelector("#results")
 console.log(resultsContainer);
 var submitButton = document.getElementById('submit');
 
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+//generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-
-
+function generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton){
 }
 
-  function showQuestions(questions, quizContainer){
+function showQuestions(questions, quizContainer){
     // we'll need a place to store the output and the answer choices
     var output = [myQuestions.userAnswer];
     var answers = "";
@@ -184,4 +248,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     showResults(questions, quizContainer, resultsContainer);
   }
 
+}//get input value
+function getInputValue(){
+
 }
+console.log();

@@ -5,52 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz</title>
-
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-  </head>
-
-  <body>
+   <link rel="stylesheet" href="./assets/css/styles.css" />
+   </head>
+   <body>
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
-
-    <div class="timer">Time: <span id="time">0</span></div>
-
+    <div class="timer">Time: <span id="time">90</span></div>
     <div class="wrapper">
       <!-- Display the countdown timer in an element -->
 
+    <p id="demo">Get it done!</p>
 
-<p id="demo"></p>
-
-
-      <div id="start-screen" class="start">
+    <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
         <p>
           Try to answer the following code-related questions within the time
           limit. Keep in mind that incorrect answers will penalize your
           score/time by ten seconds!
         </p>
-        <button id="start">Start Quiz</button>
-      </div>
-
-      <div id="questions" class="show">
-        <h2 id="question-title"></h2>
+        <button onclick="startQuiz()" onclick="clearInterval">Start Quiz</button>
+       </div>
+      
+    <div id="questions-1" class="hide">
+       <h2 id="question-title" class=question1>What is the dom?</h2>
         <div id="choices" class="choices"></div>
+        <li class="wrong" > An array of objects.
+          <li class="right"   > The Document Object Module.
+          <li class="wrong"  > A new computer virus. 
+          </li>
       </div>
+      
+      <div id="questions" class="hide">
+        <h2 id="question-title" class=question1>What is an array?</h2>
+         <div id="choices"  class="choices"></div>
+         <li>   A variable container.
+           <li> New shoes from nike.
+           <li> A web API. 
+           </li>
+       </div>
+
+
+      <div id="questions" class="hide">
+        <h2 id="question-title" class=question1>Which statement is true?</h2>
+         <div id="choices" class="choices"></div>
+         <li>  > HTML does not work alongside js.
+           <li>  > Javascript is a rock band.
+           <li>  > You can do calculations with js.
+           </li>
+       </div>
+       
+       <div id="questions" class="hide">
+        <h2 id="question-title">What is the dom?</h2>
+         <div id="choices" class="choices"></div>
+         <li>  > An array of objects.
+           <li>  > The Document Object Module.
+           <li>  > A new computer virus. 
+           </li>
+       </div>
+ 
+       <div id="questions" class="hide">
+        <h2 id="question-title">What is the dom?</h2>
+         <div id="choices" class="choices"></div>
+         <li>  > An array of objects.
+           <li>  > The Document Object Module.
+           <li>  > A new computer virus. 
+           </li>
+       </div>
+      
 
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
         <p>
           Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
+          <button id="submit"type="button" onclick="userInputValue();">Submit</button>
         </p>
       </div>
 
-     
-
       <div id="feedback" class="feedback hide"></div>
     </div>
+
+    <script src="../assets/questions.js"></script>
     <script src="../starter/script.js"></script>
     <script src="../assets/logic.js"></script>
-    <script src="../assets/questions.js"></script>
+    
   </body>
 </html>

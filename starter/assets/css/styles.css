@@ -4,13 +4,15 @@ body {
 }
 
 a {
-  color: #563d7c;
+  color: #7c58b3;
   text-decoration: none;
   transition: color 0.1s;
 }
-
+.democlass {
+  color: red;
+}
 a:hover {
-  color: #8570a5;
+  color: #bea3e6;
 }
 
 button {
@@ -31,21 +33,21 @@ button:hover {
 }
 
 .choices button {
-  display: block;
+  display: show;
 }
 
 #demo {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(46, 131, 205);
-  background-color: #6a6179;
+  color: rgb(0, 0, 0);
+  background-color: #b28ee3;
   height: 70px;
   font-size: 50px;
 }
 
 #demo:hover {
-  background-color: rgb(71, 128, 128);
+  background-color: #9562dd;
 }
 
 input[type="text"] {
@@ -56,15 +58,23 @@ ol {
   padding-left: 0px;
   max-height: 400px;
   overflow: auto;
+  background-color: rgb(0, 0, 0);
 }
 
 li {
   padding: 5px;
   list-style: decimal inside none;
+  background-color: #b28ee3;
 }
 
+li:hover {
+  background-color: #dec4ff;
+}
 li:nth-child(odd) {
-  background-color: #f3edfc;
+  background-color: #a684d4;
+}
+li:nth-child(odd):hover {
+  background-color: #dec4ff;
 }
 
 .wrapper {
@@ -72,9 +82,11 @@ li:nth-child(odd) {
   max-width: 600px;
 }
 
+
 .hide {
-  display: none;
+  display: show;
 }
+
 
 .start {
   text-align: center;
@@ -99,5 +111,5 @@ li:nth-child(odd) {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: coral;
+  color: rgb(0, 0, 0);
 }
