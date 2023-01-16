@@ -44,6 +44,7 @@ button:hover {
   background-color: #b28ee3;
   height: 70px;
   font-size: 50px;
+  font-family:Arial;
 }
 
 #demo:hover {
@@ -65,6 +66,7 @@ li {
   padding: 5px;
   list-style: decimal inside none;
   background-color: #b28ee3;
+  cursor: pointer;
 }
 
 li:hover {
@@ -80,18 +82,26 @@ li:nth-child(odd):hover {
 .wrapper {
   margin: 100px auto 0 auto;
   max-width: 600px;
+
 }
 
-
-.hide {
+#questions{
   display: show;
 }
 
+.hide {
+  display: show;
+
+}
+
+#end-screen {
+  display: show;
+
+}
 
 .start {
   text-align: center;
 }
-
 .scores {
   position: absolute;
   top: 10px;

@@ -44,7 +44,7 @@ let myQuestions = [
 
 ];
 
-for (var i=0; i=>3; i++ )
+
 function clicked() {
   var answerText = document.getElementById("answer");
   answerText.style.display = "inline";

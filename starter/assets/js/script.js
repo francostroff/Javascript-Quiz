@@ -10,12 +10,14 @@
   
 // let start = document.querySelector('#start');
 
-//timer countdown
 
-let maxTicks = 90;
+
+//timer countdown
+let timer = 0
+let maxTicks = 91;
 let tickCount = 0;
 let tick = function()
-{if (tickCount >= maxTicks)
+{if (tickCount === maxTicks)
     {
    // Stops the interval.
         clearInterval(myInterval);
@@ -27,32 +29,16 @@ let tick = function()
 };
 let myInterval = setInterval(tick, 1000);
 
-
+//starts the quiz
 function startQuiz() {
   document.getElementById("start-screen").innerHTML = "";
  }
- function startQuestion1() {
-  document.getElementByClass("hide").innerHTML = "";
+ 
+//show question 1
+function startQuestion(){
+  document.getElementsByClassName(".hide").innerHTML = "";
  }
-
-
- document.getElementById('choices').addEventListener('click', choices_Div);
-//show questions
-//  let titleDiv = document.getElementById('questions-1');
-//  function startQuestion(){
-//  document.getElementById("questions-1").innerHTML="";
-//  console.log()
-//  }
-let startScreen = document.getElementById("#start-screen");
-
-document.getElementById("questions-1").addEventListener('click',myQuestions);
-
-let i=0
-
-const correctAnswers = ["2", "1", "3"];
-
-// var todoList = document.querySelector("#todo-list");
-// renderTodos();
+  console.log(questions);
 
 // titleDiv.textContent = questions;
 // showQuestion(questions);
@@ -112,7 +98,6 @@ const correctAnswers = ["2", "1", "3"];
 
 
 
-
 // start.addEventListener('click', function() {
 // 	let i = 0;
 // });
@@ -162,7 +147,7 @@ const correctAnswers = ["2", "1", "3"];
 // 
 var resultsContainer = document.getElementById('results');
 // const results = document.querySelector("#results")
-console.log(resultsContainer);
+//console.log(resultsContainer);
 var submitButton = document.getElementById('submit');
 
 //generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
