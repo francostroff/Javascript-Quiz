@@ -26,8 +26,6 @@ function startQuiz() {
   myInterval = setInterval(tick, 1000);
   startScreen.setAttribute("class","hide")
   myQuestions.removeAttribute("class")
-  
-  
   showQuestion()
 }
 
