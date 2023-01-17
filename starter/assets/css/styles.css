@@ -84,18 +84,8 @@ li:nth-child(odd):hover {
   max-width: 600px;
 
 }
-
-#questions{
-  display: show;
-}
-
 .hide {
-  display: show;
-
-}
-
-#end-screen {
-  display: show;
+  display: none;
 
 }
 
