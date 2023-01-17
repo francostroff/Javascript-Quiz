@@ -7,6 +7,9 @@ AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
+## Git Repository:    https://github.com/francostroff/Javascript-QuizLinks to an external site.
+
+## Live URL:   https://francostroff.github.io/Javascript-Quiz/
 
 ## Acceptance Criteria
 ![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
