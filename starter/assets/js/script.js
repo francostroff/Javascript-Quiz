@@ -2,11 +2,11 @@ console.log(document.body);
 console.log(document.body.children);
 console.log(questions)
 var myInterval;
+var choices;
 let myQuestions = document.querySelector("#questions");
-let answerContainer = document.getElementById("#choices");
-let correctAnswer = [];
+let answers = document.getElementsByClassName("choices")
 let selectedAnswers = {};
-let index;
+var currentIndex= 0;
 var resultsContainer = document.getElementById('results');
 var results=[];
 let startScreen = document.getElementById("start-screen");
@@ -20,20 +20,25 @@ let tick = function(){
   maxTicks--
   secondsLeft.textContent=maxTicks
 }
-// The particular code you want to excute on each tick 
-    // document.getElementById("time").innerHTML = (maxTicks - tickCount);
-    // tickCount++;
 
 //starts the quiz
 function startQuiz() {
   myInterval = setInterval(tick, 1000);
   startScreen.setAttribute("class","hide")
   myQuestions.removeAttribute("class")
+  
+  
+  showQuestion()
 }
 
 function showQuestion() {
- document.getElementById("questions").style.display = "block"
-}
+ var currentQuestion= questions[currentIndex];
+ //update question 
+ var questionTitle=document.getElementById("question-title");
+ questionTitle.textContent = currentQuestion.question;
+ var questionAnswers=document.getElementById("choices");
+ questionAnswers.textContent = currentQuestion.answers
+ }
 
 //show question 1
 function RespondClick() {
@@ -45,8 +50,6 @@ function RespondClick() {
   var resultsContainer = document.getElementById('results');
   var results=[];
 
-
-//generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 function generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton){
 }
