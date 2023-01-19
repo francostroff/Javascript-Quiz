@@ -14,7 +14,7 @@ let questions = [
     answers: [
        '<javascript>',
       '<scripting>',
-      '<script>',s
+      '<script>',
     ],
     correctAnswer: '<script>'
   },

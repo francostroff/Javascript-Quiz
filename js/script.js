@@ -4,7 +4,7 @@ console.log(questions)
 var myInterval;
 var choices;
 let myQuestions = document.querySelector("#questions");
-let answers = document.getElementsByClassName("choices")
+let choiceContainer = document.getElementById("choices")
 let selectedAnswers = {};
 var currentIndex= 0;
 var resultsContainer = document.getElementById('results');
@@ -14,7 +14,7 @@ var submitButton = document.getElementById('submit');
 var secondsLeft = document.getElementById("time");
 //timer countdown
 let maxTicks = 90;
-let minTicks = 0
+//let minTicks = 0
 let tickCount = 0;
 let tick = function(){
   maxTicks--
@@ -26,7 +26,7 @@ function startQuiz() {
   myInterval = setInterval(tick, 1000);
   startScreen.setAttribute("class","hide")
   myQuestions.removeAttribute("class")
-  
+  showQuestion()
 }
 
 function showQuestion() {
@@ -34,10 +34,22 @@ function showQuestion() {
  //update question 
  var questionTitle=document.getElementById("question-title");
  questionTitle.textContent = currentQuestion.question;
- var questionAnswers=document.getElementById("choices");
- questionAnswers.textContent = currentQuestion.answers
- }
-
+ choiceContainer.innerHTML = "";
+ currentQuestion.answers.forEach(function(choice,i){
+  //should create buttons for each answer choice
+  var choiceButton = document.createElement ("button");
+  choiceButton.setAttribute("class","choice");
+  choiceButton.setAttribute("value",choice);
+  console.log(choice);
+  choiceButton.textContent = i+1+". "+ choice;
+  // choiceButton.onclick = questionClick
+  console.log(choiceButton.textContent);
+  choiceContainer.appendChild(choiceButton);
+ })
+}
+// need to write a function that check whether answers click is right or wrong
+// if its wrong subtract time and move to next question (need an if statement also need currentIndex++)
+// if its right move to the next question (currentIndex++)
 //show question 1
 function RespondClick() {
   document.getElementById("questions").innerHTML +=
