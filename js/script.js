@@ -46,6 +46,7 @@ function showQuestion() {
   choiceContainer.appendChild(choiceButton);
  });
 }
+// comment here
 // need to write a function that check whether answers click is right or wrong
 // if its wrong subtract time and move to next question (need an if statement also need currentIndex++)
 // if its right move to the next question (currentIndex++)
