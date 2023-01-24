@@ -1,6 +1,7 @@
 console.log(document.body);
 console.log(document.body.children);
 console.log(questions)
+
 var myInterval;
 var choices;
 let myQuestions = document.querySelector("#questions");
@@ -51,9 +52,10 @@ function showQuestion() {
 // if its wrong subtract time and move to next question (need an if statement also need currentIndex++)
 // if its right move to the next question (currentIndex++)
 //show question 1
-function RespondClick() {
-  document.getElementById("questions").innerHTML +=
-            "Click Event" + "<br>";
+function choiceClick() {
+  if (this.value !== questions[currentIndex].correctAnswer) {
+    maxTicks -= 15 
+  }
 }
 //  start.addEventListener('click', function() {
 // });
@@ -69,7 +71,7 @@ function showQuestions(questions, quizContainer){
     var output = [questions.userAnswer];
     var answers = "";
     console.log(output);
-    console.log(answers)
+    console.log(answers);
 
     // for each question...
     for(var i=0; i<questions.length; i++){
