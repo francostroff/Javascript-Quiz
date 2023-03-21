@@ -71,7 +71,17 @@ function choiceClick() {
 // });
   // var resultsContainer = document.getElementById('results');
   // var results=[];
+  function stopGame(){
+  clearInterval(myInterval);
+  var endScreen = document.getElementById('end-screen');
+  endScreen.removeAttribute('class');
+  var finalScore = document.getElementById('final-score');
+  finalScore.textContent = maxTicks;
+  myQuestions.setAttribute('class','hide');
+  console.log(secondsLeft);
 
+
+}
 
 // function generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton){
 // }
@@ -132,7 +142,7 @@ function choiceClick() {
       if(userAnswer===questions[i].correctAnswer){
         // add to the number of correct answers
         numCorrect++;
-        
+     console.log(numCorrect)   
         // color the answers green
         answerContainers[i].style.color = 'lightgreen';
       }
@@ -145,7 +155,8 @@ function choiceClick() {
 
     // show number of correct answers out of total
     resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-  }
+  console.log(questions.length)}
+
 
   // show questions right away
   // showQuestions(questions, quizContainer);
